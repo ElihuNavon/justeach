@@ -12,6 +12,9 @@ Don't forget to backup in drive after every edit!
     
 */
 
+.filter-label {
+    color: black !important;
+}
 
 /*
 a.school-title.navbar-brand
