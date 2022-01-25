@@ -1,0 +1,915 @@
+/*          Justeach-Code-Snippets | Custom CSS V1.210404   */
+
+/* 
+
+Don't forget to backup in drive after every edit!
+
+"Get the f-ck off of my code"
+    -Elihu Navon 
+    
+*/
+
+
+/*
+a.school-title.navbar-brand 
+{
+    display:none !important;
+}
+*/
+  
+  .alert-header { /* removes green alerts from screen top */
+    display: none;
+}
+  
+.content-box {      /* aligns https://justudy.co.il/privacy/agree_updated_privacy_policy text to the right */
+    direction: rtl !important;  
+    text-align: right !important;
+}
+
+.edit-btn
+{
+      position: inherit !important;
+      top: 0px !important;
+      right: 0px !important;
+}
+
+[data-testid="vat-line-container"]
+{
+  display: none !important; /* Removes VAT line in checkout pages*/
+}
+
+[aria-controls="businessNameToggle"] {
+    display: none !important; /* Removes VAT section in checkout pages*/
+}
+
+a[href$='/secure/261359/current_user/contact'] , a[href$='/secure/261359/current_user/address'] , a[href$='/current_user/address'] , a[href$='/current_user/contact']/* Removes כתובת and צור קשר from user profile*/
+{
+    display: none !important;
+}
+
+
+.m-t-3-xs label._3x1ps._33HFU._2kIOe.dsp-flex-xs.m-b-0-xs.p-b-0-xs {    /* remove "פרטי המשלוח זהים לפרטי החיוב" in checkout page */ 
+    display: none;
+}
+
+fieldset div label { /* Aligns labels of coaching intake forms to the right*/
+    text-align: right !important;
+}
+
+.selected [aria-live~="polite"] /*removes "incorrect" and "correct" labels in quiz answers because they cannot be translated into hebrew*/
+{
+    display: none;
+}
+
+input#orderBumpId { /* Fixes order bump input checkbox too close to text */
+    margin-left: 5px;
+}
+
+span._13Wkg {       /* Fixes order bump prices too close to כולל מעמ */
+    margin-left: 5px !important;
+}
+
+.homepage-hero.blog /* Cleans blog header size */
+{
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+}
+
+span.block__curriculum__section__list__item__lecture-duration { /* Fixes lecture duration in 2.0 editor being too close to lecture name in curriculum preview */
+    padding-left: 6px !important;
+}
+
+.featured-product-card__content {   /* Fixes 2.0 pages featured product in rows being displaced*/
+    padding-right: 15px !important;
+}
+p.featured-product-card__meta__item.featured-product-card__price {   /* Fixes 2.0 pages featured product pricing in rows being displaced*/
+    text-align: left;
+    padding-left: 16px !important;
+}
+
+.blog-container .sidebar-block h2 /* Fixes blog/forum info box on the side. */
+{
+    text-align: center;
+}
+
+/* 2.0 JUSTEACH DRAG AND DROP TEMPALATES*/
+
+th.imptd { /* In manage subscriptions box fixes titles of table aligned left */
+    text-align: right;
+}
+a.navbar__title {       /* Fixes font in justudy banner navbar title being off */
+    font-family: 'Rubik';
+}
+
+.quiz-progress {        /* Fixes question amount out of total questions in quizzes in lectures */
+    direction: ltr;
+}
+
+.admin-header
+{
+    display:none;
+}
+
+.quiz-question
+{
+    height:100% !important;
+}
+
+.navbar__menu__list .menu-trigger       /*Fixes font of "עוד" button in 2.0 pages navbar*/
+{
+    font-family:rubik !important;       
+
+}
+@media (max-width:768px)    /* Fixes עוד button aligned to the left in mobile dropdown menu*/
+{
+     .blog-container .row
+    {
+        display: flex; flex-direction: column-reverse; 
+    }
+    button.menu-trigger 
+    {
+    direction: rtl;    
+    }
+}
+
+.navbar__menu__list li  /* Fixes navbar drop down menu items aligned to the left in 2.0 pages */
+{
+    text-align: right;
+}
+
+.page-layout-v2, .navbar__menu, .footer
+{
+    font-family:rubik;
+}
+
+.navbar div /* Fixes 2.0 navbars buttons ltr */
+{
+    direction:ltr !important;
+}
+.navbar #user-menu /* Fixes 2.0 navbars users menu buttons ltr */
+{
+    text-align:right;
+}
+ /*li .menu-trigger       Removes "עוד" from menu in 2.0 navbars because 5 max buttons for navbars
+{
+    display:none;
+}
+*/
+
+.freebirdFormviewerViewFooterEmbeddedBackground
+{
+    display:none;
+}
+
+ul.block__curriculum__section__list { /* Fixes Course curriculum misdirection in 2.0 editor */
+    direction: ltr;
+}
+p.featured-product-card__author__name { /* Fixes author name to close to author picture in course blocks 2.0 editor */
+    margin-right: 7px;
+}
+p.featured-product-card__meta__item.featured-product-card__price { /* Fixes Course price misplaced in course blocks 2.0 editor */
+    text-align: left;
+    padding-left:4px;
+}
+
+
+.block__image-with-text__wrapper { /* Fixes Image With Text image in wrong direction and text misplaced 2.0 editor */
+    direction: ltr;
+}
+.featured-product-card__content { /* Fixes course block text being orange */
+    color: #2b3636;
+}
+
+.navbar-fedora.is-at-top.is-not-signed-in.is-blog    /*Fixes navbar blog signed out no*/
+{
+    background: #bf3f3f !important;
+}
+
+@keyframes fadecolor {                  /* Animates course block text to orange on hover */
+  from {color: #2b3636;}
+  to {color: #BA9906;}
+}
+.featured-product-card:hover  .featured-product-card__content 
+{ 
+    animation-name:fadecolor;
+    animation-duration: 0.5s;
+    color: #BA9906;
+}
+
+
+/* ---------- START OF NEW CODE! (code after the 2020 redesign) ---------- */
+
+
+
+/* Extra Small Devices, Phones */ 
+
+@media only screen and (max-width : 480px)  
+{
+    .homepage-hero-header { height: 640px !important; }
+    .homepage-hero-header h1 { font-size: 44px !important; }
+    .homepage-hero-header img { width: 50%; margin-top: 80px; }
+    .display-flex { display: block; }
+}
+
+span.small.course-author-name {     /* Fixes autho name too close to author image in course box */
+    padding-right: 5px !important;
+}
+
+input#saveCard {  /* Fixes "שמור את פרטי התשלום שלי לרכישות הבאות" being too close to checkbox in checkout pages */
+    margin-left: 7px;
+}
+
+input#shippingAddressSame {  /* Fixes "כתובת המשלוח זהה לכתובת החיוב" being too close to checkbox in checkout pages */
+    margin-left: 7px;
+}
+
+.dsp-flex-xs.flex-align-items-center-xs { /* Fixes "רכישה מוצפנת" Lock symbol too close to text in checkout page */
+    margin-left: 7px;
+}
+
+#justudy-homepage-title /* Fixes homepage title font size and changes color to white*/
+{
+    font-size:48px; !important
+}
+.new-hero-header h1
+{
+   color:white !important; 
+}
+
+#block-21898671
+{
+    position:relative;
+    top:-80px;
+}
+
+ul.nav.navbar-nav.navbar-right {    /*Fixes navbar buttons aligned to the left in mobile hamburger menu*/
+    text-align: right;
+}
+
+.fAHgD /* Hidese arena.im chat powered by chat room */
+{
+    display:none !important;
+}
+
+.navbar-nav ul.dropdown-menu {  /*Fixes navbar buttons aligned to the left in mobile hamburger menu עוד dropdown menu*/
+    text-align: right;
+}
+.display-flex 
+{ 
+    display: block;
+}
+
+.homepage-hero-header
+{
+    background-image:;
+}
+
+.revamped_lecture_player header.half-height .lecture-left .settings-dropdown
+{
+    border-right: 0px;
+}
+
+
+/* WIP
+@media (max-width: 767px) and (min-width: 0px)
+{
+   
+.course-listing .course-listing-subtitle 
+    {
+        margin: 10px 0 15px 0; !important
+    }
+  
+}
+.course-listing .course-listing-enrolled {
+    padding-bottom: 50px;
+}
+
+.course-listing
+{
+    border-radius:0;
+}
+
+.course-box-image
+{
+    border-radius:0 !important;
+}
+.course-listing-extra-info .course-price 
+{
+    padding-top:20px !important;
+}
+
+
+.course-listing .course-listing-extra-info
+{
+    padding:0 !important;
+}
+.course-listing-extra-info .course-author 
+{
+    padding: 15px 45px;
+    text-align: left;
+    line-height: 30px;
+}
+.course-listing-extra-info .course-price 
+{
+    
+    padding: 15px 45px 15px 30px;
+    border: 1px solid #e6eff5;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.course-author
+{
+     padding: 15px 45px 15px 30px;
+    border: 1px solid #e6eff5;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+*/
+/* ---------- END OF NEW CODE! (code after the 2020 redesign) ---------- */
+
+
+/* ---------- START OF LEGACY CODE! (code before the 2020 redesign) ---------- */
+
+
+/* 
+
+Don't forget to backup in drive after every edit!
+
+"Get the f-ck off of my code"
+    -Elihu Navon 
+    
+*/
+
+.webinar            /* fixes iframe dimensions for webinar iframe embeds */
+{
+    display:block;
+    margin:0 auto;
+    width:75% !important;
+}
+
+
+.dropdown-menu /* In courses page limits dropdown menu height and makes it scrollable*/
+{
+    max-height: 450px;
+    overflow: auto;
+}
+
+#react-checkout .flex-direction-column
+{
+    margin-right:14px !important;
+}
+.post .post-share 
+{
+    margin-left:10px;
+}
+
+
+span.prev {                 /* Fixes Pagination because not translatable */
+    display: none;
+}
+span.first {                 /* Fixes Pagination because not translatable */
+    display: none;
+}
+span.last {                 /* Fixes Pagination because not translatable */
+    display: none;
+}
+span.next {                 /* Fixes Pagination because not translatable */
+    display: none;
+}
+.pagination
+{
+    border-radius:0 !important;
+}
+.pagination a
+{
+    border-right: 0px !important;
+    margin-right: 0px !important;
+}
+
+button.btn.btn-hg.btn-primary.btn-inline-block.btn-price.btn-instant-checkout { 
+    /*  Fixes upsell button being too close to Horizontal Line/block above it in thankyou page mainly*/
+    margin-top: 32px;
+}
+
+span#instant-checkout-upsell-price-product-2436059 {    /* Fixes upsell button pricing (on thankyou pages mainly) having a weird line on it */
+    border-left: 0;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+}
+
+._29hyf /* Moves the first block of sales pages a little bit to the left */
+{
+    position: relative;
+    left: 28px;
+}
+
+#agreed_to_terms_checkbox /* Moves the checkbox of "agreed to terms" in sales pages a little bit to the left*/
+{
+    position: relative !important;
+    left: 5px !important; 
+    bottom:1px !important;
+}
+.testimonial-photo /*   the testimonial profile pictures in sales pages a little bit to the left*/
+{
+    position: relative;
+    left: 15px;
+}
+.m-b-3-xs
+{   
+    text-align:right !important;        /*Aligns "עם רכישה זו אתה מסכים שתחויב על בסיס חודשי." To the right in checkout pags.*/
+}
+.comment-arrow-border /* Removes displaced arrow next to comment bubbles. *CAN BE REDESIGNED, REQUIRES MODERATION! */
+{
+    display:none !important;
+}
+.comments__block-box__meta-tag-instructor /*Fixes instructor tag below pic in profile in comments section being displaced to the left*/
+{
+    margin-left:14px !important;
+}
+
+.wistia_responsive_wrapper div 
+/* Fixes displacement of buttons in video players due to direction:rtl's affect. Also fixes volume slider displacement.
+30.03.2020 -ElihuNavon */ 
+{
+    direction: ltr !important;
+}
+.quiz-controls /*Fixes quiz control button text pointiong to the wrong direction*/
+{
+    direction:ltr;
+}
+
+.quiz-controls .pull-left /*Fixes quiz buttons hiding and making quiz dysfunctional*/
+{
+    position:relative; !important;
+}
+
+#coupon_code /* Fixes coupon code button hiding text in checkout page*/
+{
+    direction:ltr;
+}
+
+#new_card .card-logos /*Removes credit card type lables that abstract vision (temporary)?*/
+{
+    display:none;
+}
+
+#country-select-inside /*Fixes select country drop-down form in in add/change credit card */
+{
+    direction:ltr;
+}
+.filter-title h2
+{
+    display:none;
+}
+.filter-title h1
+{
+    position:relative;
+    bottom:20px;
+}
+.verify-card.profile /*Fixes verify card margin in add/change credit card*/
+{
+    margin-top:20px !important;
+}
+
+
+.product_1065147
+    {
+        display:none;
+    }
+
+.course-list .course-top-row.has-hero-image
+{
+    padding:120px 0 0 0 !important;
+}
+
+.homepage-hero /* Makes homepage hero shorter  */
+{
+    padding:135px 0 140px 0 !important;
+}
+#phoneNumberHeader a /* fixes phone number color on smartphones */
+{
+    color: inherit; /* Inherit text color of parent element. */
+    text-decoration: underline; /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */
+}
+#phoneNumberHeader a:hover
+{
+    color: inherit; /* Inherit text color of parent element. */
+    text-decoration: none; /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */
+}
+
+
+body  /* The font of the whole website, might change later */
+    { 
+        font-family: 'Rubik', 'Alef', sans-serif !important;
+
+    }
+
+footer  /* Fixes footer */
+    {
+        color:white;
+        font-size:125%; 
+    }
+footer a 
+    {
+        color:white;  /* Fixes footer */
+    }
+footer a:hover 
+    {
+        color:lightgrey;  /* Fixes footer */
+    }
+
+div  /* Just makes the WHOLE SITE RTL CUZ ITS IN HEBREW */
+    {  
+        direction: rtl; 
+
+    }
+.lecture-nav /* Fixes lelcture navigation bar on top ("השלם והמשף \ להרצאה הבאה") */
+    {
+        direction:ltr;
+    }
+.code-viewer /* Fixes code alignment in the code-viewer. */
+    {
+        direction:ltr;
+    }
+    
+.course-listing-subtitle /* Fixes course description text looking too small. */
+    {
+        overflow: hidden !important;
+        text-overflow:initial !important;
+        max-height:75px !important;
+        height:75px !important;
+        font-size:105% !important;
+       -webkit-box-orient: unset !important;
+    }
+#old-deleted-price 
+    {
+        font-size:70%;
+        color:orangered;
+        float:left;
+    }
+.filter-label /* Fixes filter direction when searching courses */
+    {
+        float:right !important;
+        margin-left:13px;
+    }
+.next-lecture-wrapper  /* Makes "להרצאה הבאה" description in courses/enrolled/12345's text bigger */
+    {
+       font-size:125%;
+    }
+.start-next-lecture  /* Reoriantates "להרצאה הבאה"'s button so it fits wrapper properly */
+    {
+        position:relative;
+        left:12px;
+    }
+.input-group /* Fixes input buttons flipped, making border radius broken */
+    {
+        direction:ltr !important;
+    }
+.input-group input /* Fixes text direction within input groups */
+    {
+        direction:rtl !important;
+    }
+.enrolled-in-course-alert-link /* Fixes "You already have this course" notification font too smalll */
+    {
+        font-size:110%;
+    }
+.enrolled-in-course-alert .close /* Fixes "You already have this course" alert X button too small */
+    {
+        position:relative;
+        top:-6px;
+        font-size:200%
+    }
+.lecture-preview /*Fixes lecture preview button being too small compared to normal show button.*/
+    {
+        padding:0 18px 0 18px !important;
+    }
+.lecture-preview:active /*Fixes lecture preview button being too small compared to normal show button when clicked.*/
+    {
+        padding:0 18px 0 18px !important;
+    }
+.spc__breadcrumbs-item::before /*Fixes Checkout page step-by-step design issue*/
+    {
+        margin-left:15px;
+    }
+.spc__breadcrumbs-item::after  /*Also fixes Checkout page step-by-step design issue*/
+    {
+        margin-right:5px;
+    }
+.spc__breadcrumbs-item  /*Fixes Checkout page step-by-step text being too small*/
+    {
+        font-size:150%;
+    }
+
+div[data-checkout] .content-box /* Fixes checkout page text aligning left */
+    {
+        text-align:right;
+    }
+
+.spc__section--review .content-box /*Fixes text inside checkout page "סיכום הזמנה" div aligning right */
+    {
+        text-align:left !important;
+    }
+.spc__section--account .content-box /*Fixes text inside checkout page "פרטי משתמש" div aligning right */
+    {
+        text-align:left !important;
+    }
+
+    
+.cc__cvc-icon /* Fixes question mark icon too close to text in checkout input cvc explenation */
+    {
+        margin-left:6px;
+    }
+.cc__logos--visa         { display:none; }  /* fixes credit card logo hiding numbers in checkout input */
+.cc__logos--amex         { display:none; }  /* fixes credit card logo hiding numbers in checkout input */
+.cc__logos--mastercard   { display:none; }  /* fixes credit card logo hiding numbers in checkout input */
+.dropdown .dropdown-menu /* Fixes drowpdown text menu when logging out aligning to the left */
+    {
+        text-align:right;
+    }
+#notification_preferences input /* Fixes checkbox hiding text in "עריכת פרופיל" page */
+    {
+        margin-left:8px;
+    }
+.powered-by
+    {
+        display:none;
+    }
+ 
+
+#new_user /* fixes text alignment in sign up page */
+    {
+        text-align:right !important;
+    }
+.text-left  /* fixes checkbox alignment in sign up page */
+    {
+        text-align:right !important;
+    }
+.g-recaptcha /* fixes captcha alignment in sign up page */
+    {
+        margin:0 auto !important;    
+    }  
+.box-half img /* fixes school icons too close to text in sign up page */
+    {
+        margin-left:5px;
+    }
+.comments__block-box__body /* fixes text in comments under lectures aligning left*/
+    {
+        text-align:right !important;
+    }
+.blocks-page-secure_course_sidebar .block.course_checkout_bullet_points ul.checkmark-list li:before
+/* Fixes photosohp sales page bulllet-points check mark */
+{
+    position:relative !important;
+    left:7px;
+    top:14px;    
+}
+.blocks-page-secure_course_sidebar .list-heading
+{
+    text-align:right !important;
+}
+    
+/*
+.section-title {
+    direction:rtl;
+}
+.body-content-view {
+    direction:ltr;
+}
+*/
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  top: auto;
+  bottom: 0px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+   
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+    
+#block-10681465 #enroll-button-top {  /* Fixes color button in eran's java-android sales page*/
+    background:#2c838e !important;
+    border:1px solid #2c838e !important;
+    }
+#block-10681465 #enroll-button-top:hover { /* Fixes color button in eran's java-android sales page while hovered */
+    background:#277884 !important;
+    border:1px solid #277884 !important;
+    }
+    
+    #block-35036464 #enroll-button-top {  /* Fixes color button in Naor Yazdan's instagram sales page*/
+    background:#c4313a !important;
+    border:1px solid #c4313a !important;
+    }
+#block-35036464 #enroll-button-top:hover { /* Fixes color button in Naor Yazdan's instagram sales page while hovered */
+    background:#aa2a33 !important;
+    border:1px solid #aa2a33 !important;
+    }
+
+#block-10681430 #enroll-button-top {  /* Fixes color button in eran's java-oop sales page*/
+    background:#00c6fd !important;
+    border:1px solid #00c6fd !important;
+    }
+#block-10681430 #enroll-button-top:hover { /* Fixes color button in eran's java-oop sales page while hovered */
+    background:#00c6fd !important;
+    border:1px solid #00c6fd !important;
+    }
+    
+    
+    
+    #block-36431442 #enroll-button-top {  /* Fixes color button in Matan shaked's sales page*/
+    background:#00bed3 !important;
+    border:1px solid #00bed3 !important;
+    }
+#block-36431442 #enroll-button-top:hover { /* Fixes color button in Matan shaked's java-oop sales page while hovered */
+    background:#00b0c4 !important;
+    border:1px solid #00b0c4 !important;
+    }
+    
+    
+#block-10681396 #enroll-button-top {  /* Fixes color button in eran's java-basics sales page*/
+    background:#2c838e !important;
+    border:1px solid #2c838e !important;
+    }
+#block-10681396 #enroll-button-top:hover { /* Fixes color button in eran's jaba-basics sales page while hovered */
+    background:#277884 !important;
+    border:1px solid #277884 !important;
+    }
+    
+#block-8446431 #enroll-button-top {  /* Fixes color button in web dev sales page*/
+    background:#0095A3 !important;
+    border:1px solid #0095A3 !important;
+    }
+#block-8446431 #enroll-button-top:hover { /* Fixes color button in web dev sales page while hovered */
+    background:#008793 !important;
+    border:1px solid #008793 !important;
+    }
+    
+#block-8229416 #enroll-button-top { /* Fixes color button in photoshop sales page*/
+    background:#188788 !important;
+    border:1px solid #188788 !important;
+    }
+#block-8229416 #enroll-button-top:hover {  /* Fixes color button in photoshop sales page while hovered */
+    background:#157778 !important;
+    border:1px solid #157778 !important;
+    }    
+
+
+#block-11692490 #enroll-button-top {  /* Fixes color button in Dor's YouTube sales page*/
+    background:#c60d0b !important;
+    border:1px solid #c60d0b !important;
+    }
+#block-11692490 #enroll-button-top:hover { /* Fixes color button in Dor's YouTube sales page while hovered */
+    background:#aa0d0d !important;
+    border:1px solid #aa0d0d !important;
+    }
+    
+    
+#block-12786906 #enroll-button-top {  /* Fixes color button in Piano sales page*/
+    background:#744729 !important;
+    border:1px solid #744729 !important;
+    }
+#block-12786906 #enroll-button-top:hover { /* Fixes color button in Piano sales page while hovered */
+    background:#5d3921 !important;
+    border:1px solid #5d3921 !important;
+    }
+    
+    #block-12811067 #enroll-button-top {  /* Fixes color button in CSharp-Basics sales page*/
+    background:#26005d !important;
+    border:1px solid #26005d !important;
+    }
+#block-12811067 #enroll-button-top:hover { /* Fixes color button in CSharp-Basics sales page while hovered */
+    background:#1e0048 !important;
+    border:1px solid #1e0048 !important;
+    }
+    
+    
+    #block-18095491 #enroll-button-top {  /* Fixes color button in Theory sales page*/
+    background:#3f75aa !important;
+    border:1px solid #3f75aa !important;
+    }
+#block-18095491 #enroll-button-top:hover { /* Fixes color button in Theory sales page while hovered */
+    background:#396c9b !important;
+    border:1px solid #396c9b !important;
+    }
+    
+    
+    
+    
+#block-7563060 .btn-primary 
+{
+    transition: all 0.25s ease;
+    border:1.5px solid white !important;
+    background: rgba(76, 175, 80, 0) !important;
+    color:white;
+}
+#block-7563060 .btn-primary:hover
+{
+    background: rgba(255, 255, 255, 1) !important;
+    color:#ba9906;
+}
+    
+    
+/* ---------- END OF LEGACY CODE! (code before the 2020 redesign) ---------- */
+
